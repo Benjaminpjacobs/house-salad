@@ -13,5 +13,5 @@ class SearchPresenter
   end
   
   private
-    attr_reader :results, :state
+    attr_reader :results
 end

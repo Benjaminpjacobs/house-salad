@@ -5,16 +5,16 @@
 
     <% @members.by_seniority.each do |member| %>
         <div class='representative'>
-            <p>Name:
+            <p><b>Name:</b>
                 <%=member.name%>
             </p>
-            <p>Role:
+            <p><b>Role:</b>
                 <%=member.party%>
             </p>
-            <p>Party:
+            <p><b>Party:</b>
                 <%=member.role%>
             </p>
-            <p>District:
+            <p><b>District:</b>
                 <%=member.district%>
             </p>
         </div>
