@@ -6,16 +6,16 @@
     <% @members.by_seniority.each do |member| %>
         <div class='representative'>
             <p>Name:
-                <%=member[:name]%>
+                <%=member.name%>
             </p>
             <p>Role:
-                <%=member[:party]%>
+                <%=member.party%>
             </p>
             <p>Party:
-                <%=member[:role]%>
+                <%=member.role%>
             </p>
             <p>District:
-                <%=member[:district]%>
+                <%=member.district%>
             </p>
         </div>
         <%end%>

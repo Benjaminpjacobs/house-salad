@@ -7,6 +7,6 @@ RSpec.describe SearchPresenter do
     most_senior = sorted.first
     least_senior = sorted.last
     
-    expect(most_senior[:seniority].to_i).to be >= least_senior[:seniority].to_i
+    expect(most_senior.seniority).to be >= least_senior.seniority
   end
 end
