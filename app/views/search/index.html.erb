@@ -1,0 +1,22 @@
+<h3>
+    <%= @members.count %> Results
+</h3>
+<div class='results'>
+
+    <% @members.each do |member| %>
+        <div class='representative'>
+            <p>Name:
+                <%=member[:name]%>
+            </p>
+            <p>Role:
+                <%=member[:party]%>
+            </p>
+            <p>Party:
+                <%=member[:role]%>
+            </p>
+            <p>District:
+                <%=member[:district]%>
+            </p>
+        </div>
+        <%end%>
+</div>

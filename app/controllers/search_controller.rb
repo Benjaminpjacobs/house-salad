@@ -6,7 +6,7 @@ class SearchController < ApplicationController
       req.url "members/house/#{st}/current.json"
       req.headers["X-API-Key"] = ENV["api-key"]
     end
-    @member = JSON.parse(results.body, :symbolize_names => true)
-    binding.pry
+    
+    @members = JSON.parse(results.body, :symbolize_names => true)[:results]
   end
 end
