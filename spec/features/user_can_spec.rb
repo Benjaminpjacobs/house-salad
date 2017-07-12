@@ -6,8 +6,14 @@ RSpec.describe "User can search members of the house" do
   select "Colorado", :from => :state
   click_button "Locate Members of the House"
   expect(current_path).to eq(search_path)
+  
   expect(page).to have_content('7 Results')
   expect(page).to have_selector('.representative', count: 7)
+  
+  within(first('.representative')) do
+    expect(page).to have_content('DeGette')
+    end
+
   expect(page).to have_content('Name:')
   expect(page).to have_content('Role:')
   expect(page).to have_content('Party:')
