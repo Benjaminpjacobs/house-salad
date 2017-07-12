@@ -1,10 +1,10 @@
 class SearchPresenter
   def initialize(state)
-    @results ||= initialize_representatives
+    @results ||= search_results
     @state = state
   end
 
-  def initialize_representatives
+  def search_results
     PropublicaService.search(state)[:results].map do |rep|
       Representative.new(rep)
     end
