@@ -1,7 +1,7 @@
 class SearchPresenter
 
   def initialize(state)
-    @results ||= Representative.search_for_reps(state)
+    @results ||= Representative.reps_by_state(state)
   end
 
   def by_seniority

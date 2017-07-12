@@ -9,7 +9,7 @@ class Representative
     @district   = data[:district]
   end
 
-  def self.search_for_reps(state)
+  def self.reps_by_state(state)
     PropublicaService.search(state)[:results].map do |rep|
       new(rep)
     end

@@ -1,5 +1,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+.search-field {
+    margin-top: 7px;
+}
 
-.search-field { margin-top: 7px;}
+.representative {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+}
 
+.results {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
