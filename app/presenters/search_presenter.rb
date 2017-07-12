@@ -1,13 +1,7 @@
 class SearchPresenter
-  def initialize(state)
-    @results ||= search_results
-    @state = state
-  end
 
-  def search_results
-    PropublicaService.search(state)[:results].map do |rep|
-      Representative.new(rep)
-    end
+  def initialize(state)
+    @results ||= Representative.search_for_reps(state)
   end
 
   def by_seniority
