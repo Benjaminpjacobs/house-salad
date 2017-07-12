@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe "User can search members of the house" do
   it "searches by state" do
-  
   visit '/'
   select "Colorado", :from => :state
   click_button "Locate Members of the House"
