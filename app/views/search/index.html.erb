@@ -3,7 +3,7 @@
 </h3>
 <div class='results'>
 
-    <% @members.each do |member| %>
+    <% @members.by_seniority.each do |member| %>
         <div class='representative'>
             <p>Name:
                 <%=member[:name]%>
